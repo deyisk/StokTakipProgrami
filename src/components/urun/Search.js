@@ -40,6 +40,18 @@ const Search = () => {
         age: "muğla",
       },
       {
+        name: "televizyon",
+        position: "",
+        office: "abc",
+        age: "muğla",
+      },
+      {
+        name: "televizyon",
+        position: "",
+        office: "abc",
+        age: "muğla",
+      },
+      {
         name: "KDV yuzde 18 urun",
         position: "",
         office: "Hizmet",
