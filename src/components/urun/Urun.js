@@ -12,7 +12,6 @@ const Urun = () => {
       <Navbar />
       <main>
         <div className="main__container" id="mainn">
-          <div className="button">merhaba</div>
           <div className="main__titles">
             <div className="main__greeting">
               <h4>ÜRÜN</h4>
