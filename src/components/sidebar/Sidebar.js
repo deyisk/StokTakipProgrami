@@ -19,38 +19,37 @@ function Sidebar({ activePage }) {
           <Link to="/">Anasayfa</Link>
         </div>
 
-        <div className={`sidebar__link ${activePage === "stok" ? "" : ""}`}>
-          {/* <i className="fa fa-user-secret"> Stok </i> */}
+        <div className="sidebar__link">
           <Dropdown />
         </div>
+
+        {/* <div
+          className={`sidebar__link ${
+            activePage === "depo" ? "active_menu_link" : ""
+          }`}
+        >
+          <i className="fa fa-wrench"></i>
+          <Link to="/depo">Depo</Link>
+        </div> */}
       </div>
 
-      <div
-        className={`sidebar__link ${
-          activePage === "depo" ? "active_menu_link" : ""
-        }`}
-      >
-        <i className="fa fa-wrench"></i>
-        <Link to="/depo">Depo</Link>
-      </div>
-
-      <div
+      {/* <div
         className={`sidebar__link ${
           activePage === "kategori" ? "active_menu_link" : ""
         }`}
       >
         <i className="fa fa-list"></i>
         <Link to="/kategori">Kategori</Link>
-      </div>
+      </div> */}
 
-      <div
+      {/* <div
         className={`sidebar__link ${
           activePage === "urun" ? "active_menu_link" : ""
         }`}
       >
         <i className="fa fa-gift"></i>
         <Link to="/urun">Ürün</Link>
-      </div>
+      </div> */}
     </div>
   );
 }
