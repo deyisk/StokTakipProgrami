@@ -7,7 +7,7 @@ import React, { Component } from "react";
 import depo from "./components/depo/Depo";
 import kategori from "./components/kategori/Kategori";
 import urun from "./components/urun/Urun";
-
+//test changes
 const App = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -21,14 +21,12 @@ const App = () => {
 
   return (
     <Router>
-      <div className="container">
-        <Switch component={App}>
-          <Route exact path="/" component={Main} />
-          <Route exact path="/Depo" component={depo} />
-          <Route exact path="/Kategori" component={kategori} />
-          <Route exact path="/Urun" component={urun} />
-        </Switch>
-      </div>
+      <Switch component={App}>
+        <Route exact path="/" component={Main} />
+        <Route exact path="/Depo" component={depo} />
+        <Route exact path="/Kategori" component={kategori} />
+        <Route exact path="/Urun" component={urun} />
+      </Switch>
     </Router>
   );
 };
