@@ -39,6 +39,18 @@
       "react-app/jest"
     ]
   },
+
+  "export":
+  {
+
+    
+
+  },
+  
+
+
+
+
   "browserslist": {
     "production": [
       ">0.2%",

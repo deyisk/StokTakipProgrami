@@ -3,8 +3,8 @@ import "./Urun.css";
 import Chart from "../charts/Chart";
 import Sidebar from "../sidebar/Sidebar";
 import Navbar from "../navbar/Navbar";
-import Search from "../urun/Search";
 import { Container, Row, Col } from "react-bootstrap";
+import Search from "../urun/Search";
 
 const Urun = () => {
   return (
@@ -23,8 +23,10 @@ const Urun = () => {
                     <h4>ÜRÜN</h4>
                   </div>
                   <p>Ürün Bilgileri</p>
+
                   <Search />
                 </div>
+
                 {/* <div className="main__cards">ürün</div> */}
               </div>
             </main>
