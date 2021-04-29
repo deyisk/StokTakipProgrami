@@ -21,7 +21,7 @@ const Dropdown = (props) => {
           <Link to="/hesabım">Hesabım</Link>
         </DropdownItem>
         <DropdownItem>
-          <Link to="/çıkış">Çıkış Yap</Link>
+          <Link to="/çıkış">ÇıkışYap</Link>
         </DropdownItem>
       </DropdownMenu>
     </ButtonDropdown>
