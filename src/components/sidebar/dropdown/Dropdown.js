@@ -25,7 +25,7 @@ class Dropdown extends Component {
 
   render() {
     return (
-      <div>
+      <div className="table-responsive">
         <div className="sidebar__menu" id="menu">
           <div className="sidebar__menu" onClick={this.showMenu}>
             <i className="fa fa-briefcase"> Stok</i>
