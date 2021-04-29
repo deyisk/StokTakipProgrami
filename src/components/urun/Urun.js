@@ -5,19 +5,18 @@ import Sidebar from "../sidebar/Sidebar";
 import Navbar from "../navbar/Navbar";
 import { Container, Row, Col } from "react-bootstrap";
 import Search from "../urun/Search";
+import { isMobile, isMobileOnly } from "react-device-detect";
 
 const Urun = () => {
   return (
     <>
-      <Container fluid style={{ padding: 0 }}>
+      <Container fluid style={{ padding: 0, margin: 0 }}>
         <Row style={{ flexDirection: "row", height: "100%" }}>
-          <Col xs={3}>
+          <Col xs={12} md={4} lg={2} style={{ padding: 0, margin: 0 }}>
             <Sidebar activePage={"urun"} />
           </Col>
-
-          <Col>
+          <Col style={{ padding: 0, margin: 0 }}>
             <Navbar />
-            <Search />
 
             <main>
               <div className="main__container" id="mainn">
@@ -27,7 +26,7 @@ const Urun = () => {
                   </div>
                   <p>Ürün Bilgileri</p>
                 </div>
-
+                <Search />
                 {/* <div className="main__cards">ürün</div> */}
               </div>
             </main>

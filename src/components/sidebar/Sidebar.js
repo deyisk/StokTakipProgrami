@@ -1,11 +1,16 @@
 import "./Sidebar.css";
 import { Link } from "react-router-dom";
+
 import Dropdown from "./dropdown/Dropdown";
 import { isMobile, isMobileOnly } from "react-device-detect";
 import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+
 function Sidebar({ activePage }) {
   console.log("ismobile", isMobile);
+
   const [sidebarMenu, setSidebarMenu] = React.useState(!isMobile);
+
   return (
     <div className="sidebar-responsive" id="sidebar">
       <div className="sidebar__title">

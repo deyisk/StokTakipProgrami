@@ -101,7 +101,7 @@ class List1 extends Component {
     const requiredItem = this.state.requiredItem;
     let modalData = this.state.brochure[requiredItem];
     return (
-      <div>
+      <div className="table-responsive">
         <table className="table table-striped">
           <tbody>{brochure}</tbody>
         </table>

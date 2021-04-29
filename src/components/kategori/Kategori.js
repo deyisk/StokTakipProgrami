@@ -12,14 +12,12 @@ import { Container, Row, Col } from "react-bootstrap";
 const Kategori = () => {
   return (
     <>
-      <Container fluid style={{ padding: 0 }}>
+      <Container fluid style={{ padding: 0, margin: 0 }}>
         <Row style={{ flexDirection: "row", height: "100%" }}>
-          <Col xs={3}>
+          <Col xs={12} md={4} lg={2} style={{ padding: 0, margin: 0 }}>
             <Sidebar activePage={"kategori"} />
-            <List1 />
-            <Refresh />
           </Col>
-          <Col>
+          <Col style={{ padding: 0, margin: 0 }}>
             <Navbar />
 
             <main>
@@ -32,6 +30,8 @@ const Kategori = () => {
                       <p>Kategori Bilgileri</p>
                     </b>
                   </div>
+                  <Refresh />
+                  <List1 />
 
                   <hr />
 
