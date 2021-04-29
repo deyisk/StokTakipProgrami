@@ -1,6 +1,7 @@
 import "./Sidebar.css";
 import { Link } from "react-router-dom";
 import Dropdown from "./dropdown/Dropdown";
+import { Container, Row, Col } from "react-bootstrap";
 
 function Sidebar({ activePage }) {
   return (

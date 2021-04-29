@@ -14,8 +14,11 @@ const Urun = () => {
           <Col xs={3}>
             <Sidebar activePage={"urun"} />
           </Col>
+
           <Col>
             <Navbar />
+            <Search />
+
             <main>
               <div className="main__container" id="mainn">
                 <div className="main__titles">
@@ -23,8 +26,6 @@ const Urun = () => {
                     <h4>ÜRÜN</h4>
                   </div>
                   <p>Ürün Bilgileri</p>
-
-                  <Search />
                 </div>
 
                 {/* <div className="main__cards">ürün</div> */}

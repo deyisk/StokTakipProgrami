@@ -24,6 +24,7 @@ function Depo() {
           <Col xs={3}>
             <Sidebar activePage={"depo"} />
           </Col>
+
           <Col>
             {/* <Depo activeTable={"depo"} /> */}
 

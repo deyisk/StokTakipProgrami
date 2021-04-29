@@ -19,6 +19,7 @@ const Kategori = () => {
           </Col>
           <Col>
             <Navbar />
+
             <main>
               <div className="main__container" id="mainn">
                 <div className="main__title">
@@ -31,11 +32,9 @@ const Kategori = () => {
                   </div>
 
                   <hr />
-
+                  <List1 />
                   <Refresh />
                   <hr />
-
-                  <List1 />
 
                   {/* <Table/> */}
                 </div>

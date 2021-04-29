@@ -102,6 +102,12 @@
   }
 }
 
+@media only screen and(min-width: 768px) {
+  #kategori {
+    display: none;
+  }
+}
+
 .kategori__title > i {
   display: inline;
 }
