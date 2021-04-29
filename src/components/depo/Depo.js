@@ -23,6 +23,8 @@ function Depo() {
         <Row style={{ flexDirection: "row", height: "100%" }}>
           <Col xs={3}>
             <Sidebar activePage={"depo"} />
+            <List />
+            <Modal />
           </Col>
 
           <Col>
@@ -42,8 +44,6 @@ function Depo() {
                     </b>
                     <Refresh />
                     <hr />
-                    <List />
-                    <Modal />
                   </div>
                 </div>
                 {/* <div className="main__cards">Depo</div> */}

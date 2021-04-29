@@ -16,6 +16,8 @@ const Kategori = () => {
         <Row style={{ flexDirection: "row", height: "100%" }}>
           <Col xs={3}>
             <Sidebar activePage={"kategori"} />
+            <List1 />
+            <Refresh />
           </Col>
           <Col>
             <Navbar />
@@ -32,8 +34,7 @@ const Kategori = () => {
                   </div>
 
                   <hr />
-                  <List1 />
-                  <Refresh />
+
                   <hr />
 
                   {/* <Table/> */}

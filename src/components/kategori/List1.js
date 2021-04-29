@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Modal from "../depo/modal/Modal";
+import { Container, Row, Col } from "react-bootstrap";
 
 class List1 extends Component {
   constructor(props) {
