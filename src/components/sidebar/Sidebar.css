@@ -86,6 +86,11 @@
   }
 }
 
+@media only screen and(max-width: 600px) {
+  .sidebar__title {
+    margin-bottom: 10px !important;
+  }
+}
 .sidebar__title > i {
   display: inline;
 }

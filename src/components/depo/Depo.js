@@ -7,29 +7,20 @@ import List from "../depo/list/List";
 import Modal from "../depo/modal/Modal";
 import Refresh from "../depo/refresh/Refresh";
 import { Container, Row, Col } from "react-bootstrap";
-
 import "jquery/dist/jquery.min.js";
 import "popper.js/dist/popper.min.js";
 import "bootstrap/dist/js/bootstrap.min.js";
-
 import "bootstrap/dist/css/bootstrap.min.css";
-
-// Style
 
 function Depo() {
   return (
     <>
-      <Container fluid style={{ padding: 0 }}>
+      <Container fluid style={{ padding: 0, margin: 0 }}>
         <Row style={{ flexDirection: "row", height: "100%" }}>
-          <Col xs={3}>
+          <Col xs={12} md={4} lg={2} style={{ padding: 0, margin: 0 }}>
             <Sidebar activePage={"depo"} />
-            <List />
-            <Modal />
           </Col>
-
-          <Col>
-            {/* <Depo activeTable={"depo"} /> */}
-
+          <Col style={{ padding: 0, margin: 0 }}>
             <Navbar />
 
             <main>
@@ -43,6 +34,8 @@ function Depo() {
                       <hr />
                     </b>
                     <Refresh />
+                    <List />
+                    <Modal />
                     <hr />
                   </div>
                 </div>
