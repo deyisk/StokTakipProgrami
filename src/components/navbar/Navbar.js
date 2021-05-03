@@ -13,7 +13,9 @@ function Navbar() {
       <div className=""></div>
       <div className="navbar__right">
         <a href="#"></a>
-        <Dropdown />
+        <div className="responsive">
+          <Dropdown />
+        </div>
       </div>
     </nav>
   );

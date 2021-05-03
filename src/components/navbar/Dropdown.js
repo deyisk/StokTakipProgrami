@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+import "./Dropdown.css";
+
 import {
   ButtonDropdown,
   DropdownToggle,
@@ -16,13 +18,17 @@ const Dropdown = (props) => {
   return (
     <ButtonDropdown isOpen={dropdownOpen} toggle={toggle}>
       <DropdownToggle caret></DropdownToggle>
+
       <DropdownMenu>
-        <DropdownItem>
-          <Link to="/hesabım">Hesabım</Link>
-        </DropdownItem>
-        <DropdownItem>
-          <Link to="/çıkış">ÇıkışYap</Link>
-        </DropdownItem>
+        <div className="item">
+          <DropdownItem>
+            <Link to="/hesabım">Hesap</Link>
+          </DropdownItem>
+
+          <DropdownItem>
+            <Link to="/çıkış">Çıkış</Link>
+          </DropdownItem>
+        </div>
       </DropdownMenu>
     </ButtonDropdown>
   );
