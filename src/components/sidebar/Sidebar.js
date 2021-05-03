@@ -1,10 +1,8 @@
 import "./Sidebar.css";
 import { Link } from "react-router-dom";
-
 import Dropdown from "./dropdown/Dropdown";
 import { isMobile, isMobileOnly } from "react-device-detect";
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
 
 function Sidebar({ activePage }) {
   console.log("ismobile", isMobile);
@@ -36,34 +34,7 @@ function Sidebar({ activePage }) {
         <div className="sidebar__link">
           <Dropdown />
         </div>
-
-        {/* <div
-          className={`sidebar__link ${
-            activePage === "depo" ? "active_menu_link" : ""
-          }`}
-        >
-          <i className="fa fa-wrench"></i>
-          <Link to="/depo">Depo</Link>
-        </div> */}
       </div>
-
-      {/* <div
-        className={`sidebar__link ${
-          activePage === "kategori" ? "active_menu_link" : ""
-        }`}
-      >
-        <i className="fa fa-list"></i>
-        <Link to="/kategori">Kategori</Link>
-      </div> */}
-
-      {/* <div
-        className={`sidebar__link ${
-          activePage === "urun" ? "active_menu_link" : ""
-        }`}
-      >
-        <i className="fa fa-gift"></i>
-        <Link to="/urun">Ürün</Link>
-      </div> */}
     </div>
   );
 }
