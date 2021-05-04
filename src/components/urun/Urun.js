@@ -6,6 +6,7 @@ import Navbar from "../navbar/Navbar";
 import { Container, Row, Col } from "react-bootstrap";
 import Search from "../urun/Search";
 import { isMobile, isMobileOnly } from "react-device-detect";
+import "./Urun.css";
 
 const Urun = () => {
   return (

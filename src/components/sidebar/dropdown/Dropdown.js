@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./Dropdown.css";
 import Depo from "../../depo/Depo";
 import Sidebar from "../../sidebar/Sidebar";
 import { Link } from "react-router-dom";
@@ -25,31 +24,29 @@ class Dropdown extends Component {
 
   render() {
     return (
-      <div className="table-responsive">
-        <div className="sidebar__menu" id="menu">
-          <div className="sidebar__menu" onClick={this.showMenu}>
-            <i className="fa fa-briefcase"> Stok</i>
-          </div>
-
-          {this.state.showMenu ? (
-            <div className="sidebar__menu" id="menu">
-              <div className="sidebar__link">
-                <i className="fa fa-wrench"></i>
-                <Link to="/depo">Depo</Link>
-              </div>
-
-              <div className="sidebar__link">
-                <i className="fa fa-list"></i>
-                <Link to="/kategori">Kategori</Link>
-              </div>
-
-              <div className="sidebar__link">
-                <i className="fa fa-gift"></i>
-                <Link to="/urun">Ürün</Link>
-              </div>
-            </div>
-          ) : null}
+      <div className="sidebar__menu" id="menu">
+        <div className="sidebar__menu" onClick={this.showMenu}>
+          <i className="fa fa-briefcase"> Stok</i>
         </div>
+
+        {this.state.showMenu ? (
+          <div className="sidebar__menu" id="menu">
+            <div className="sidebar__link">
+              <i className="fa fa-wrench"></i>
+              <Link to="/depo">Depo</Link>
+            </div>
+
+            <div className="sidebar__link">
+              <i className="fa fa-list"></i>
+              <Link to="/kategori">Kategori</Link>
+            </div>
+
+            <div className="sidebar__link">
+              <i className="fa fa-gift"></i>
+              <Link to="/urun">Ürün</Link>
+            </div>
+          </div>
+        ) : null}
       </div>
     );
   }
