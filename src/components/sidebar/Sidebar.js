@@ -28,7 +28,7 @@ function Sidebar({ activePage }) {
           }`}
         >
           <i className="fa fa-home"></i>
-          <Link to="/">Anasayfa</Link>
+          <Link to="/main">Anasayfa</Link>
         </div>
 
         <div className="sidebar__link">

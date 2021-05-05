@@ -15,7 +15,6 @@ class Login extends React.Component {
                   style={{ fontSize: "110px" }}
                 ></i>
               </h4>
-
               <div className="image"></div>
             </div>
 
@@ -32,6 +31,7 @@ class Login extends React.Component {
                     type="text"
                     className="form-control"
                     placeholder="email"
+                    id="mail"
                   />
                 </div>
                 <div className="input-group mb3" id="password">
@@ -46,26 +46,24 @@ class Login extends React.Component {
                     type="text"
                     className="form-control"
                     placeholder="password"
+                    id="pwd"
                   />
                 </div>
 
                 <button
                   type="buttonn"
+                  id="sbt"
                   className="btn btn-secondary btn-block"
                   onClick={() => {
                     localStorage.setItem("user", true);
-                    window.location.href = "/";
+
+                    // window.location.href = "/";
                   }}
                 >
-                  <Link to="/">Giriş Yap</Link>
+                  <Link to="/main">Giriş Yap</Link>
                 </button>
 
                 <div className="message">
-                  <div>
-                    {" "}
-                    <input type="checkbox" />
-                    Beni Hatırla{" "}
-                  </div>
                   <div>
                     <a href="#" input="value">
                       <Link to="/forgot">Parolanızı mı Unuttunuz?</Link>
