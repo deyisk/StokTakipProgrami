@@ -30,20 +30,6 @@ class List extends Component {
           aciklama: "hatay",
           islem: "",
         },
-
-        {
-          title: "ANKARA",
-          msg: "ANKARA DEPO",
-          aciklama: "ankara",
-          islem: "",
-        },
-
-        {
-          title: "İSTANBUL",
-          msg: "İSTANBUL DEPO",
-          aciklama: "bilgisayar",
-          islem: "",
-        },
       ],
     };
   }

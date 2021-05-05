@@ -31,20 +31,6 @@ class List1 extends Component {
           aciklama: "",
           adres: "",
         },
-
-        // {
-        //   title: "ANKARA",
-        //   msg: "ANKARA DEPO",
-        //   aciklama: "ankara",
-        //   islem: "islem",
-        // },
-
-        // {
-        //   title: "İSTANBUL",
-        //   msg: "İSTANBUL DEPO",
-        //   aciklama: "bilgisayar",
-        //   islem: "islem",
-        // },
       ],
     };
   }
@@ -69,7 +55,8 @@ class List1 extends Component {
   }
 
   render() {
-    const brochure = this.state.brochure.map((item, index) => {
+    const brochure = this.state.brochure.length > 0;
+    return this.state.brochure.map((item, index) => {
       return (
         <tr key={index}>
           <td>{item.title}</td>

@@ -16,7 +16,6 @@ class List3 extends Component {
           urun: "Bilgisayar",
           aciklama: "acşklama",
           depo: "depo",
-
           kategori: "kategori",
         },
       ],

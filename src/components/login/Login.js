@@ -66,7 +66,6 @@ class Login extends React.Component {
                     <input type="checkbox" />
                     Beni Hatırla{" "}
                   </div>
-
                   <div>
                     <a href="#" input="value">
                       <Link to="/forgot">Parolanızı mı Unuttunuz?</Link>
