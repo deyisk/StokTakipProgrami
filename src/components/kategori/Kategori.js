@@ -6,8 +6,6 @@ import List1 from "./List1";
 import Refresh from "../depo/refresh/Refresh";
 import { Container, Row, Col } from "react-bootstrap";
 
-// import Table from "../depo/Table";
-
 const Kategori = () => {
   return (
     <>
@@ -33,10 +31,7 @@ const Kategori = () => {
                   <Refresh />
 
                   <List1 />
-
-                  {/* <Table/> */}
                 </div>
-                {/* <div className="main__cards">Kategori</div> */}
               </div>
             </main>
           </Col>

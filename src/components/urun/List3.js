@@ -42,45 +42,55 @@ class List3 extends Component {
   }
 
   render() {
-    const brochure = this.state.brochure.map((item, index) => {
-      return (
-        <tr key={index}>
-          <td>{item.urun}</td>
-
-          <td>{item.aciklama}</td>
-          <td>{item.depo}</td>
-          <td>{item.kategori}</td>
-
-          <td>
-            <i
-              className="fa fa-pencil"
-              data-toggle="modal"
-              data-target="#exampleModal"
-              onClick={() => this.replaceModalItem(index)}
-            ></i>{" "}
-            <i
-              className="fa fa-trash"
-              onClick={() => this.deleteItem(index)}
-            ></i>
-          </td>
-        </tr>
-      );
-    });
-
     const requiredItem = this.state.requiredItem;
     let modalData = this.state.brochure[requiredItem];
+    const brochure =
+      this.state.brochure.length > 0 ? (
+        this.state.brochure.map((item, index) => {
+          return (
+            <tr key={index}>
+              <td>{item.urun}</td>
+
+              <td>{item.aciklama}</td>
+              <td>{item.depo}</td>
+              <td>{item.kategori}</td>
+
+              <td>
+                <i
+                  className="fa fa-pencil"
+                  data-toggle="modal"
+                  data-target="#exampleModal"
+                  onClick={() => this.replaceModalItem(index)}
+                ></i>{" "}
+                <i
+                  className="fa fa-trash"
+                  onClick={() => this.deleteItem(index)}
+                ></i>
+              </td>
+            </tr>
+          );
+        })
+      ) : (
+        <div>
+          <p>Hiç Ürün Bulunamadı</p>
+        </div>
+      );
+
     return (
       <div className="table-responsive">
         <table className="table table-striped">
           <tbody>{brochure}</tbody>
         </table>
-        <Modal3
-          urun={modalData.urun}
-          aciklama={modalData.aciklama}
-          depo={modalData.depo}
-          saveModalDetails={this.saveModalDetails}
-          kategori={modalData.kategori}
-        />
+
+        {this.state.brochure.length > 0 && (
+          <Modal3
+            urun={modalData.urun}
+            aciklama={modalData.aciklama}
+            depo={modalData.depo}
+            saveModalDetails={this.saveModalDetails}
+            kategori={modalData.kategori}
+          />
+        )}
       </div>
     );
   }

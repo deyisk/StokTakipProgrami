@@ -31,7 +31,7 @@ class Login extends React.Component {
                   <input
                     type="text"
                     className="form-control"
-                    placeholder="E-mail"
+                    placeholder="email"
                   />
                 </div>
                 <div className="input-group mb3" id="password">
@@ -45,7 +45,7 @@ class Login extends React.Component {
                   <input
                     type="text"
                     className="form-control"
-                    placeholder="Şifre"
+                    placeholder="password"
                   />
                 </div>
 
@@ -57,7 +57,7 @@ class Login extends React.Component {
                     window.location.href = "/";
                   }}
                 >
-                  GİRİŞ YAP
+                  <Link to="/">Giriş Yap</Link>
                 </button>
 
                 <div className="message">
@@ -73,11 +73,6 @@ class Login extends React.Component {
                   </div>
                 </div>
               </form>
-              {/* <div className="social">
-              <a href="#"><i className="fab fa-facebook"></i></a>
-              <a href="#"><i className="fab fa-twitter-square"></i></a>
-              <a href="#"><i className="fab fa-google"></i></a>
-            </div> */}
             </div>
           </div>
         </div>

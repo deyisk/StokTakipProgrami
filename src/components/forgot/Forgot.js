@@ -43,6 +43,7 @@ class Forgot extends React.Component {
                   onClick={() => {
                     localStorage.setItem("user", true);
                     window.location.href = "/";
+                    alert("E-posta gönderildi!");
                   }}
                 >
                   E-POSTA GÖNDER

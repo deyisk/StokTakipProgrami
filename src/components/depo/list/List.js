@@ -54,48 +54,57 @@ class List extends Component {
   }
 
   render() {
-    const brochure = this.state.brochure.map((item, index) => {
-      return (
-        <tr key={index}>
-          <td>{item.title}</td>
-          <td>{item.msg}</td>
-          <td>{item.aciklama}</td>
-          <td>{item.islem}</td>
-
-          <td>
-            <button
-              className="btn btn-primary"
-              data-toggle="modal"
-              data-target="#exampleModal"
-              onClick={() => this.replaceModalItem(index)}
-            >
-              Düzenle
-            </button>{" "}
-            <button
-              className="btn btn-danger"
-              onClick={() => this.deleteItem(index)}
-            >
-              Kaldır
-            </button>
-          </td>
-        </tr>
-      );
-    });
-
     const requiredItem = this.state.requiredItem;
     let modalData = this.state.brochure[requiredItem];
+    const brochure =
+      this.state.brochure.length > 0 ? (
+        this.state.brochure.map((item, index) => {
+          return (
+            <tr key={index}>
+              <td>{item.title}</td>
+              <td>{item.msg}</td>
+              <td>{item.aciklama}</td>
+              <td>{item.islem}</td>
+
+              <td>
+                <button
+                  className="btn btn-primary"
+                  data-toggle="modal"
+                  data-target="#exampleModal"
+                  onClick={() => this.replaceModalItem(index)}
+                >
+                  Düzenle
+                </button>{" "}
+                <button
+                  className="btn btn-danger"
+                  onClick={() => this.deleteItem(index)}
+                >
+                  Kaldır
+                </button>
+              </td>
+            </tr>
+          );
+        })
+      ) : (
+        <div>
+          <p>Hiç Depo Bulunamadı</p>
+        </div>
+      );
+
     return (
       <div className="table-responsive">
         <table className="table table-striped">
           <tbody>{brochure}</tbody>
         </table>
-        <Modal
-          title={modalData.title}
-          msg={modalData.msg}
-          aciklama={modalData.aciklama}
-          islem={modalData.islem}
-          saveModalDetails={this.saveModalDetails}
-        />
+        {this.state.brochure.length > 0 && (
+          <Modal
+            title={modalData.title}
+            msg={modalData.msg}
+            aciklama={modalData.aciklama}
+            islem={modalData.islem}
+            saveModalDetails={this.saveModalDetails}
+          />
+        )}
       </div>
     );
   }
