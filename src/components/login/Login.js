@@ -51,16 +51,16 @@ class Login extends React.Component {
                 </div>
 
                 <button
-                  type="buttonn"
+                  type="button"
                   id="sbt"
                   className="btn btn-secondary btn-block"
                   onClick={() => {
                     localStorage.setItem("user", true);
 
-                    // window.location.href = "/";
+                    window.location.href = "/main";
                   }}
                 >
-                  <Link to="/main">Giriş Yap</Link>
+                  giriş
                 </button>
 
                 <div className="message">

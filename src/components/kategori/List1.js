@@ -87,7 +87,7 @@ class List1 extends Component {
           );
         })
       ) : (
-        <div>
+        <div className="table-responsive">
           <p>Hiç kategori Bulunamadı</p>
         </div>
       );
