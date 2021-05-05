@@ -1,6 +1,5 @@
 import React from "react";
 import "./Main.css";
-import Chart from "../charts/Chart";
 import Sidebar from "../sidebar/Sidebar";
 import Navbar from "../navbar/Navbar";
 import { Link } from "react-router-dom";

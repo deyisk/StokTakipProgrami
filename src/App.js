@@ -7,10 +7,15 @@ import React, { Component } from "react";
 import depo from "./components/depo/Depo";
 import kategori from "./components/kategori/Kategori";
 import urun from "./components/urun/Urun";
+import login from "./components/login/Login";
+import forgot from "./components/forgot/Forgot";
 //test changes
 const App = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  let [auth, setAuth] = React.useState(
+    localStorage.getItem("user") ? true : false
+  );
 
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const openSidebar = () => {
     setSidebarOpen(true);
   };
@@ -26,6 +31,8 @@ const App = () => {
         <Route exact path="/Depo" component={depo} />
         <Route exact path="/Kategori" component={kategori} />
         <Route exact path="/Urun" component={urun} />
+        <Route exact path="/Login" component={login} />
+        <Route exact path="/Forgot" component={forgot} />
       </Switch>
     </Router>
   );

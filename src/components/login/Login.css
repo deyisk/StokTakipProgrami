@@ -1,0 +1,34 @@
+.loginn {
+  width: 300px;
+  height: 10px;
+  margin: 0 auto;
+}
+
+.text-primary {
+  margin: 10px;
+  padding: 60px;
+}
+
+.Login-link {
+  color: #61dafb;
+}
+
+.message {
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.buttonn {
+  padding: 10px;
+  height: 19px;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

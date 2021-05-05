@@ -1,5 +1,4 @@
 import React from "react";
-import Chart from "../charts/Chart";
 import Sidebar from "../sidebar/Sidebar";
 import Navbar from "../navbar/Navbar";
 // import Table from "../depo/Table";

@@ -1,6 +1,5 @@
 import React from "react";
 import "./Kategori.css";
-import Chart from "../charts/Chart";
 import Sidebar from "../sidebar/Sidebar";
 import Navbar from "../navbar/Navbar";
 import List1 from "./List1";
@@ -30,12 +29,10 @@ const Kategori = () => {
                       <p>Kategori Bilgileri</p>
                     </b>
                   </div>
+                  <hr />
                   <Refresh />
+
                   <List1 />
-
-                  <hr />
-
-                  <hr />
 
                   {/* <Table/> */}
                 </div>

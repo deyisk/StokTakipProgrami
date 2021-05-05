@@ -18,15 +18,13 @@ const Dropdown = (props) => {
       <DropdownToggle caret></DropdownToggle>
 
       <DropdownMenu>
-        <div className="item">
-          <DropdownItem>
-            <Link to="/hesabım">Hesap</Link>
-          </DropdownItem>
+        <DropdownItem>
+          <Link to="/hesabım">Hesap</Link>
+        </DropdownItem>
 
-          <DropdownItem>
-            <Link to="/çıkış">Çıkış</Link>
-          </DropdownItem>
-        </div>
+        <DropdownItem>
+          <Link to="/çıkış">Çıkış</Link>
+        </DropdownItem>
       </DropdownMenu>
     </ButtonDropdown>
   );

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import Depo from "../../depo/Depo";
-import Sidebar from "../../sidebar/Sidebar";
+
 import { Link } from "react-router-dom";
 
 class Dropdown extends Component {

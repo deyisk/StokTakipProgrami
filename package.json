@@ -23,6 +23,7 @@
     "react-search-bar": "^2.2.0",
     "react-search-box": "^2.0.2",
     "react-search-field": "^1.2.0",
+    "react-select": "^4.3.0",
     "react-simple-dropdown": "^3.2.3",
     "react-vis": "^1.11.7",
     "reactstrap": "^8.9.0",
