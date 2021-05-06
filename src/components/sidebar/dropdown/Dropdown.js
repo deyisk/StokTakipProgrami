@@ -44,6 +44,11 @@ class Dropdown extends Component {
               <i className="fa fa-gift"></i>
               <Link to="/urun">Ürün</Link>
             </div>
+
+            <div className="sidebar__link">
+              <i className="fa fa-gift"></i>
+              <Link to="/add">Add</Link>
+            </div>
           </div>
         ) : null}
       </div>

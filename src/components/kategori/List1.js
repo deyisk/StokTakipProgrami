@@ -68,20 +68,16 @@ class List1 extends Component {
               <td>{item.adres}</td>
 
               <td>
-                <button
-                  className="btn btn-primary"
+                <i
+                  className="fa fa-pencil"
                   data-toggle="modal"
                   data-target="#exampleModal"
                   onClick={() => this.replaceModalItem(index)}
-                >
-                  Düzenle
-                </button>{" "}
-                <button
-                  className="btn btn-danger"
+                ></i>{" "}
+                <i
+                  className="fa fa-trash"
                   onClick={() => this.deleteItem(index)}
-                >
-                  Kaldır
-                </button>
+                ></i>
               </td>
             </tr>
           );

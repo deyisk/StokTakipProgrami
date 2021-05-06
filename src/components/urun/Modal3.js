@@ -55,6 +55,7 @@ class Modal3 extends Component {
               <h5 className="modal-title" id="exampleModalLabel">
                 Düzenle
               </h5>
+
               <button
                 type="button"
                 className="close"
@@ -84,10 +85,13 @@ class Modal3 extends Component {
 
               <p>
                 <span className="modal-lable">Depo:</span>
-                <input
-                  value={this.state.depo}
-                  onChange={(e) => this.depoHandler(e)}
-                />
+
+                <select id="change">
+                  <option value="">Depo Seçiniz..</option>
+                  <option value="this">Ankara</option>
+                  <option value="that">İzmir</option>
+                  <option value="that">İstanbul</option>
+                </select>
               </p>
 
               <p>

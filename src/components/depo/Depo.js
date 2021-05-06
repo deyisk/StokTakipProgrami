@@ -29,10 +29,14 @@ function Depo() {
                     <h4>DEPO</h4>
                     <b>
                       {" "}
+                      <span className="duzenle">
+                        <i className="fa fa-plus"></i>
+                      </span>{" "}
                       <p>Depo Bilgileri</p>
                       <hr />
                     </b>
                     <Refresh />
+
                     <List />
                     <Modal />
                     <hr />

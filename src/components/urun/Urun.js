@@ -26,16 +26,16 @@ const Urun = () => {
                   <div className="main__greeting">
                     <h4>ÜRÜN</h4>
                     <b>
-                      {" "}
+                      <span className="duzenle">
+                        <i className="fa fa-plus"></i>
+                      </span>{" "}
                       <p>Ürün Bilgileri</p>
                     </b>
                   </div>
+
                   <hr />
                   <List3 />
-
-                  {/* <Table/> */}
                 </div>
-                {/* <div className="main__cards">Kategori</div> */}
               </div>
             </main>
           </Col>

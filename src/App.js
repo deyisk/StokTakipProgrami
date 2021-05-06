@@ -1,7 +1,13 @@
-import { useState } from "react";
+import { useReducer, useState } from "react";
 import Navbar from "./components/navbar/Navbar";
 import Sidebar from "./components/sidebar/Sidebar";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Redirect,
+} from "react-router-dom";
 import React, { Component } from "react";
 import depo from "./components/depo/Depo";
 import kategori from "./components/kategori/Kategori";
@@ -9,6 +15,7 @@ import urun from "./components/urun/Urun";
 import login from "./components/login/Login";
 import forgot from "./components/forgot/Forgot";
 import main from "./components/main/Main";
+import add from "./components/urun/add/Add";
 
 const App = () => {
   let [auth, setAuth] = React.useState(
@@ -35,6 +42,7 @@ const App = () => {
         <Route exact path="/Urun" component={urun} />
         <Route exact path="/Login" component={login} />
         <Route exact path="/Forgot" component={forgot} />
+        <Route exact path="/Add" component={add} />
       </Switch>
     </Router>
   );

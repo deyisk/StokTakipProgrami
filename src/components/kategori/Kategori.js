@@ -23,7 +23,9 @@ const Kategori = () => {
                   <div className="main__greeting">
                     <h4>KATEGORİ</h4>
                     <b>
-                      {" "}
+                      <span className="duzenle">
+                        <i className="fa fa-plus"></i>
+                      </span>{" "}
                       <p>Kategori Bilgileri</p>
                     </b>
                   </div>
