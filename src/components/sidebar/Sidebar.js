@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Dropdown from "./dropdown/Dropdown";
 import { isMobile, isMobileOnly } from "react-device-detect";
 import React from "react";
-
 function Sidebar({ activePage }) {
   console.log("ismobile", isMobile);
 

@@ -15,7 +15,6 @@ import urun from "./components/urun/Urun";
 import login from "./components/login/Login";
 import forgot from "./components/forgot/Forgot";
 import main from "./components/main/Main";
-import add from "./components/urun/add/Add";
 
 const App = () => {
   let [auth, setAuth] = React.useState(
@@ -34,15 +33,14 @@ const App = () => {
   return (
     <Router>
       <Switch component={App}>
-        <Route exact path="/" component={login} />
+        <Route exact path="/" component={main} />
         <Route exact path="/Main" component={main} />
 
         <Route exact path="/Depo" component={depo} />
         <Route exact path="/Kategori" component={kategori} />
         <Route exact path="/Urun" component={urun} />
-        <Route exact path="/Login" component={login} />
         <Route exact path="/Forgot" component={forgot} />
-        <Route exact path="/Add" component={add} />
+        <Route exact path="/Login" component={login} />
       </Switch>
     </Router>
   );

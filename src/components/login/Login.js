@@ -1,8 +1,35 @@
 import "./Login.css";
-import React from "react";
+import React, { createContext, useReducer, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 class Login extends React.Component {
+  state = {
+    email: "",
+    pwd: "",
+    rememberMe: false,
+  };
+
+  componentDidMount() {
+    const rememberMe = localStorage.getItem("rememberMe") === "true";
+    const email = rememberMe ? localStorage.getItem("email") : "";
+    const pwd = rememberMe ? localStorage.getItem("pwd") : "";
+    this.setState({ email, rememberMe, pwd });
+  }
+
+  handleChange = (event) => {
+    const input = event.target;
+    const value = input.type === "checkbox" ? input.checked : input.value;
+
+    this.setState({ [input.name]: value });
+  };
+
+  handleFormSubmit = () => {
+    const { email, rememberMe, pwd } = this.state;
+    localStorage.setItem("rememberMe", rememberMe);
+    localStorage.setItem("email", rememberMe ? email : "");
+    localStorage.setItem("pwd", rememberMe ? pwd : "");
+  };
+
   render() {
     return (
       <div className="log">
@@ -17,10 +44,9 @@ class Login extends React.Component {
               </h4>
               <div className="image"></div>
             </div>
-
             <div className="body-form">
-              <form>
-                <div className="input-group mb-3" id="email">
+              <form onSubmit={this.handleFormSubmit}>
+                <div className="input-group mb-3">
                   <div className="input-group-prepend">
                     <span className="input-group-text">
                       <i class="fa fa-user"></i>
@@ -29,11 +55,14 @@ class Login extends React.Component {
 
                   <input
                     type="text"
-                    className="form-control"
+                    name="email"
                     placeholder="email"
-                    id="mail"
+                    className="form-control"
+                    value={this.state.email}
+                    onChange={this.handleChange}
                   />
                 </div>
+
                 <div className="input-group mb3" id="password">
                   <div className="input-group-prepend">
                     <span className="input-group-text">
@@ -43,24 +72,26 @@ class Login extends React.Component {
                   </div>
 
                   <input
+                    name="pwd"
+                    value={this.state.pwd}
                     type="text"
                     className="form-control"
-                    placeholder="password"
-                    id="pwd"
+                    placeholder="Şifre"
+                    onChange={this.handleChange}
                   />
                 </div>
 
-                <button
-                  type="button"
-                  id="sbt"
-                  className="btn btn-secondary btn-block"
-                  onClick={() => {
-                    localStorage.setItem("user", true);
-
-                    window.location.href = "/main";
-                  }}
-                >
-                  giriş
+                <label>
+                  <input
+                    name="rememberMe"
+                    checked={this.state.rememberMe}
+                    onChange={this.handleChange}
+                    type="checkbox"
+                  />{" "}
+                  Beni Hatırla
+                </label>
+                <button type="submit" className="btn btn-secondary btn-block">
+                  Giriş Yap{" "}
                 </button>
 
                 <div className="message">
