@@ -1,25 +1,40 @@
 import "./Login.css";
-import React, { createContext, useReducer, useEffect, useState } from "react";
+import React, {
+  createContext,
+  useReducer,
+  useEffect,
+  useState,
+  Component,
+} from "react";
 import { Link } from "react-router-dom";
+import { Redirect } from "react-router-dom";
+import axios from "axios";
+
+const reducer = (state, action) => {};
 
 class Login extends React.Component {
   state = {
-    email: "",
-    pwd: "",
-    rememberMe: false,
+    users: [],
+    dispatchEvent: (action) => {
+      this.setState((state) => reducer(state, action));
+    },
   };
 
-  componentDidMount() {
+  componentDidMount = async () => {
     const rememberMe = localStorage.getItem("rememberMe") === "true";
     const email = rememberMe ? localStorage.getItem("email") : "";
     const pwd = rememberMe ? localStorage.getItem("pwd") : "";
     this.setState({ email, rememberMe, pwd });
-  }
+    const response = await axios.get("http://localhost:3002/users");
+    console.log(response);
+    // this.setState({
+    //   users: response.data,
+    // });
+  };
 
-  handleChange = (event) => {
-    const input = event.target;
+  handleChange = (e) => {
+    const input = e.target;
     const value = input.type === "checkbox" ? input.checked : input.value;
-
     this.setState({ [input.name]: value });
   };
 
@@ -60,6 +75,7 @@ class Login extends React.Component {
                     className="form-control"
                     value={this.state.email}
                     onChange={this.handleChange}
+                    required
                   />
                 </div>
 
@@ -70,30 +86,32 @@ class Login extends React.Component {
                       <i class="fa fa-lock"></i>{" "}
                     </span>
                   </div>
-
                   <input
                     name="pwd"
-                    value={this.state.pwd}
                     type="text"
                     className="form-control"
                     placeholder="Şifre"
                     onChange={this.handleChange}
+                    value={this.state.pwd}
+                    required
                   />
                 </div>
-
                 <label>
                   <input
                     name="rememberMe"
+                    type="checkbox"
                     checked={this.state.rememberMe}
                     onChange={this.handleChange}
-                    type="checkbox"
                   />{" "}
-                  Beni Hatırla
+                  {""}Beni Hatırla
                 </label>
-                <button type="submit" className="btn btn-secondary btn-block">
-                  Giriş Yap{" "}
+                <button
+                  type="submit"
+                  id="button1"
+                  className="btn btn-secondary btn-block"
+                >
+                  Giriş
                 </button>
-
                 <div className="message">
                   <div>
                     <a href="#" input="value">
