@@ -21,6 +21,15 @@ const App = () => {
     localStorage.getItem("user") ? true : false
   );
 
+  const GuardedRoute = ({ component: Component, auth, ...rest }) => (
+    <Route
+      {...rest}
+      render={(props) =>
+        auth ? <Component {...props} /> : <Redirect to="/login" />
+      }
+    />
+  );
+
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const openSidebar = () => {
     setSidebarOpen(true);
@@ -33,14 +42,14 @@ const App = () => {
   return (
     <Router>
       <Switch component={App}>
-        <Route exact path="/" component={main} />
-        <Route exact path="/Main" component={main} />
+        <GuardedRoute exact path="/" component={main} auth={auth} />
+        <GuardedRoute exact path="/Main" component={main} auth={auth} />
 
-        <Route exact path="/Depo" component={depo} />
-        <Route exact path="/Kategori" component={kategori} />
-        <Route exact path="/Urun" component={urun} />
-        <Route exact path="/Forgot" component={forgot} />
-        <Route exact path="/Login" component={login} />
+        <GuardedRoute exact path="/Depo" component={depo} auth={auth} />
+        <GuardedRoute exact path="/Kategori" component={kategori} auth={auth} />
+        <GuardedRoute exact path="/Urun" component={urun} auth={auth} />
+        <GuardedRoute exact path="/Forgot" component={forgot} auth={!auth} />
+        <GuardedRoute exact path="/Login" component={login} auth={!auth} />
       </Switch>
     </Router>
   );
