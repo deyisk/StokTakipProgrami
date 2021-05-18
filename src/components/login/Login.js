@@ -9,12 +9,15 @@ import React, {
 import { Link } from "react-router-dom";
 import { Redirect } from "react-router-dom";
 import axios from "axios";
+import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
+import { render } from "@testing-library/react";
 
 const reducer = (state, action) => {};
 
 class Login extends React.Component {
   state = {
     users: [],
+
     dispatchEvent: (action) => {
       this.setState((state) => reducer(state, action));
     },
@@ -50,15 +53,14 @@ class Login extends React.Component {
     let sonuc = response.data.filter(
       (user) => user.email === email && user.password === pwd
     );
+
     if (sonuc.length > 0) {
       localStorage.setItem("rememberMe", rememberMe);
       localStorage.setItem("email", email);
       localStorage.setItem("pwd", pwd);
       localStorage.setItem("user", true);
       window.location.href = "/";
-    } else {
-      alert("yanlıs giridniz");
-    }
+    } else alert("yanlış girdiniz..");
   };
 
   render() {
@@ -128,6 +130,7 @@ class Login extends React.Component {
               >
                 Giriş
               </button>
+
               <div className="message">
                 <div>
                   <a href="#" input="value">

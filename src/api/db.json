@@ -9,5 +9,24 @@
       "email":"abc@test.com",
       "password":"qwert"
     }
+  ],
+
+  "brochure":[
+    {
+        
+      "title":"Bilgisayar",
+      "msg":"Bilgisayar,Laptop",
+      "aciklama":"abc depo",
+      "adres":"istanbul"
+    },
+    {
+     
+      "title":"Hizmet",
+      "msg":"Hizmet Kategorisi",
+      "aciklama":"aciklmaa",
+      "adres":"adres"
+    }
+
   ]
+  
 }

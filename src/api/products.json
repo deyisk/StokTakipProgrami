@@ -1,0 +1,14 @@
+{
+    "urunler":[
+        
+            {
+                "urun": "Bilgisayar",
+                "aciklama": "aciklama",
+                "depo": "depo",
+                "kategori": "kategori"
+              }
+        
+
+    ]
+
+}

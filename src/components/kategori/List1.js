@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Modal2 from "../kategori/Modal2";
 import { Container, Row, Col } from "react-bootstrap";
+import axios from "axios";
 
 class List1 extends Component {
   constructor(props) {
@@ -9,28 +10,7 @@ class List1 extends Component {
     this.saveModalDetails = this.saveModalDetails.bind(this);
     this.state = {
       requiredItem: 0,
-      brochure: [
-        {
-          title: "Bilgisayar",
-          msg: "Bilgisayar,Laptop,etc.",
-          aciklama: "abc depo",
-          adres: "İstanbul",
-        },
-
-        {
-          title: "Hizmet",
-          msg: "Hizmet Kategorisi",
-          aciklama: "",
-          adres: "",
-        },
-
-        {
-          title: "Hatay",
-          msg: "Hatay",
-          aciklama: "",
-          adres: "",
-        },
-      ],
+      brochure: [],
     };
   }
 
@@ -52,6 +32,14 @@ class List1 extends Component {
     tempBrochure.splice(index, 1);
     this.setState({ brochure: tempBrochure });
   }
+
+  componentDidMount = async () => {
+    const response = await axios.get("http://localhost:3004/brochure");
+  };
+
+  handleFormSubmit = async () => {
+    await axios.get("http://localhost:3004/brochure");
+  };
 
   render() {
     const requiredItem = this.state.requiredItem;

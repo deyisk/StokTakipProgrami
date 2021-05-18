@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Modal3 from "../urun/Modal3";
 import { Container, Row, Col } from "react-bootstrap";
 import Select from "react-select";
+import axios from "axios";
 
 class List3 extends Component {
   constructor(props) {
@@ -11,14 +12,7 @@ class List3 extends Component {
     this.saveModalDetails = this.saveModalDetails.bind(this);
     this.state = {
       requiredItem: 0,
-      brochure: [
-        {
-          urun: "Bilgisayar",
-          aciklama: "acşklama",
-          depo: "depo",
-          kategori: "kategori",
-        },
-      ],
+      urunler: [],
     };
   }
 
@@ -30,23 +24,31 @@ class List3 extends Component {
 
   saveModalDetails(item) {
     const requiredItem = this.state.requiredItem;
-    let tempbrochure = this.state.brochure;
-    tempbrochure[requiredItem] = item;
-    this.setState({ brochure: tempbrochure });
+    let tempurunler = this.state.urunler;
+    tempurunler[requiredItem] = item;
+    this.setState({ urunler: tempurunler });
   }
 
   deleteItem(index) {
-    let tempBrochure = this.state.brochure;
-    tempBrochure.splice(index, 1);
-    this.setState({ brochure: tempBrochure });
+    let tempUrunler = this.state.urunler;
+    tempUrunler.splice(index, 1);
+    this.setState({ urunler: tempUrunler });
   }
+
+  componentDidMount = async () => {
+    await axios.get("http://localhost:3002/urunler");
+  };
+
+  handleFormSubmit = async () => {
+    await axios.get("http://localhost:3002/urunler");
+  };
 
   render() {
     const requiredItem = this.state.requiredItem;
-    let modalData = this.state.brochure[requiredItem];
-    const brochure =
-      this.state.brochure.length > 0 ? (
-        this.state.brochure.map((item, index) => {
+    let modalData = this.state.urunler[requiredItem];
+    const urunler =
+      this.state.urunler.length > 0 ? (
+        this.state.urunler.map((item, index) => {
           return (
             <tr key={index}>
               <td>{item.urun}</td>
@@ -79,10 +81,10 @@ class List3 extends Component {
     return (
       <div className="table-responsive">
         <table className="table table-striped">
-          <tbody>{brochure}</tbody>
+          <tbody>{urunler}</tbody>
         </table>
 
-        {this.state.brochure.length > 0 && (
+        {this.state.urunler.length > 0 && (
           <Modal3
             urun={modalData.urun}
             aciklama={modalData.aciklama}

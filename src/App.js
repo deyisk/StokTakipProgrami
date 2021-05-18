@@ -44,7 +44,6 @@ const App = () => {
       <Switch component={App}>
         <GuardedRoute exact path="/" component={main} auth={auth} />
         <GuardedRoute exact path="/Main" component={main} auth={auth} />
-
         <GuardedRoute exact path="/Depo" component={depo} auth={auth} />
         <GuardedRoute exact path="/Kategori" component={kategori} auth={auth} />
         <GuardedRoute exact path="/Urun" component={urun} auth={auth} />
