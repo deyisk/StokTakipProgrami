@@ -48,7 +48,7 @@ const App = () => {
         <GuardedRoute exact path="/Kategori" component={kategori} auth={auth} />
         <GuardedRoute exact path="/Urun" component={urun} auth={auth} />
         <GuardedRoute exact path="/Forgot" component={forgot} auth={!auth} />
-        <GuardedRoute exact path="/Login" component={login} auth={!auth} />
+        <GuardedRoute exact path="/Login" component={login} auth={auth} />
       </Switch>
     </Router>
   );

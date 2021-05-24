@@ -19,11 +19,13 @@ const Dropdown = (props) => {
 
       <DropdownMenu>
         <DropdownItem>
-          <Link to="/hesabım">Hesap</Link>
+          {/* <Link to="/hesabım">Hesap</Link> */}
+          <a>Hesabım</a>
         </DropdownItem>
 
         <DropdownItem>
-          <Link to="/çıkış">Çıkış</Link>
+          {/* <Link to="/çıkış">Çıkış</Link> */}
+          <a>Çıkış</a>
         </DropdownItem>
       </DropdownMenu>
     </ButtonDropdown>

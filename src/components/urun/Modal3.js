@@ -86,16 +86,10 @@ class Modal3 extends Component {
               <p>
                 <span className="modal-lable">Depo:</span>
 
-                {/* <input
-                // value={this.state.depo}
-                // onChange={(e) => this.depoHandler(e)}
-                /> */}
-                <select id="change">
-                  <option>Depo Seçiniz..</option>
-                  <option>Ankara</option>
-                  <option>İzmir</option>
-                  <option>İstanbul</option>
-                </select>
+                <input
+                  value={this.state.depo}
+                  onChange={(e) => this.depoHandler(e)}
+                />
               </p>
 
               <p>

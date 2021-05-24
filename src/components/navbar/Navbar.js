@@ -6,14 +6,12 @@ import Login from "../login/Login";
 function Navbar() {
   return (
     <nav className="navbar">
-      {/* <div className="button">
-        <i className="fa fa-user-link"></i>
-        {/* <Link to="/login">Login</Link> */}
-      {/* </div> */}
       <div className=""></div>
       <div className="navbar__right">
         <a href="#"></a>
-        <div className="responsive">{/* <Dropdown /> */}</div>
+        <div className="responsive">
+          <Dropdown />
+        </div>
         <div className="logins">
           <i className="fa fa-user"> </i>
           <Link to="/login">Login</Link>

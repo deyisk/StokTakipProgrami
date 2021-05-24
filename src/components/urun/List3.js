@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import Modal3 from "../urun/Modal3";
 import { Container, Row, Col } from "react-bootstrap";
-import Select from "react-select";
-import axios from "axios";
 
 class List3 extends Component {
   constructor(props) {
@@ -12,7 +10,14 @@ class List3 extends Component {
     this.saveModalDetails = this.saveModalDetails.bind(this);
     this.state = {
       requiredItem: 0,
-      urunler: [],
+      urunler: [
+        {
+          urun: "Bilgisayar",
+          aciklama: "aciklama",
+          depo: "depo",
+          kategori: "kategori",
+        },
+      ],
     };
   }
 
@@ -34,14 +39,6 @@ class List3 extends Component {
     tempUrunler.splice(index, 1);
     this.setState({ urunler: tempUrunler });
   }
-
-  componentDidMount = async () => {
-    await axios.get("http://localhost:3002/urunler");
-  };
-
-  handleFormSubmit = async () => {
-    await axios.get("http://localhost:3002/urunler");
-  };
 
   render() {
     const requiredItem = this.state.requiredItem;

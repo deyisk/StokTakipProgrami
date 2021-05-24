@@ -10,7 +10,27 @@ class List extends Component {
     this.saveModalDetails = this.saveModalDetails.bind(this);
     this.state = {
       requiredItem: 0,
-      brochure: [],
+      brochure: [
+        {
+          title: "Hizmet Deposu",
+          msg: "İstanbul",
+          aciklama: "İstanbul Depo",
+          islem: "işlem",
+        },
+        {
+          title: "Bilgisayar Donanım",
+          msg: "İstanbul",
+          aciklama: "İstanbul Depo",
+          islem: "",
+        },
+
+        {
+          title: "Hatay",
+          msg: "Hatay",
+          aciklama: "hatay",
+          islem: "",
+        },
+      ],
     };
   }
 
@@ -32,14 +52,7 @@ class List extends Component {
     tempBrochure.splice(index, 1);
     this.setState({ brochure: tempBrochure });
   }
-  componentDidMount = async () => {
-    await axios.get("http://localhost:3002/depo");
-    // console.log(response);
-  };
-
-  handleFormSubmit = async () => {
-    await axios.get("http://localhost:3002/depo");
-  };
+ 
 
   render() {
     const requiredItem = this.state.requiredItem;
